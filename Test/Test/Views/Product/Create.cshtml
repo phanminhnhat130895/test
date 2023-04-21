@@ -1,0 +1,35 @@
+﻿@model Test.Models.Product
+
+@{
+    ViewData["Title"] = "Create Product Page";
+}
+
+<div>
+    <h2>Create Product</h2>
+    @using(Html.BeginForm("Create", "Product", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <p>Name</p>
+        @Html.TextBoxFor(m => m.Name)
+        <p>
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "error-message" })
+        </p>
+
+        <p>Description</p>
+        @Html.TextAreaFor(m => m.Description)
+        <p>
+            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "error-message" })
+        </p>
+
+        <p>Price</p>
+        @Html.TextBoxFor(m => m.Price)
+        <p>
+            @Html.ValidationMessageFor(m => m.Price, "", new { @class = "error-message" })
+        </p>
+
+        <div style="margin-top: 10px;">
+            <button type="submit" class="btn-primary">Create</button>
+        </div>
+    }
+</div>

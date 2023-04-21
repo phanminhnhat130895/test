@@ -1,0 +1,27 @@
+﻿@model List<Test.Models.Product>
+
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<div>
+    <h2>Products</h2>
+    <a class="btn-primary" href="@Url.Action("Create", "Product")">ADD</a>
+    <table style="margin-top: 10px;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.Name</th>
+                <th>@item.Description</th>
+                <th>@item.Price.ToString("0.00")</th>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+}
